@@ -16,13 +16,13 @@ struct AddReminderView: View {
     var body: some View {
         NavigationView {
             Form {
-                TextField("Title", text: $title)
-                DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
+                TextField("タイトル", text: $title)
+                DatePicker("通知日", selection: $dueDate, displayedComponents: .date)
             }
-            .navigationTitle("Add Reminder")
-            .navigationBarItems(leading: Button("Cancel") {
+            .navigationTitle("予定を追加")
+            .navigationBarItems(leading: Button("キャンセル") {
                 presentationMode.wrappedValue.dismiss()
-            }, trailing: Button("Save") {
+            }, trailing: Button("保存") {
                 viewModel.addReminder(title: title, dueDate: dueDate)
                 presentationMode.wrappedValue.dismiss()
             })
