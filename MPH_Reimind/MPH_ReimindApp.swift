@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct MPH_ReimindApp: App {
+struct ReminderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+
